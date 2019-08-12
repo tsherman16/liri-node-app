@@ -87,22 +87,16 @@ function movieNeeds(movie) {
     )
 }
 
-
-
-
-
-//needing to loop though for the info needed
-
 function concertNeeds(artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(
         function (response) {
-
+            var date = "";
             for (var i = 0; i < response.data.length; i++) {
                 console.log("Venue name: " + JSON.stringify(response.data[i].venue.name, null, 2));
                 console.log("Venue location: " + JSON.stringify(response.data[i].venue.city, null, 2));
-                console.log("Event date: " + moment(JSON.stringify(response.data[i].datetime, null, 2)).format("MM/DD/YYYY"));
+                date = JSON.stringify(response.data[i].datetime, null, 2).split("T");
+                console.log("Event date: " + moment(date[0], "YYYY-MM-DD").format("MM/DD/YYYY"));
             }
-
         });
 }
 
