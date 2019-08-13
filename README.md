@@ -73,6 +73,14 @@ As you can see above, when you enter the command for do-what-it-says, it will pu
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+## **Github Links**
+
+* [Github-pages](https://tsherman16.github.io/liri-node-app/)
+
+* [Github-repository](https://github.com/tsherman16/liri-node-app)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
 ## **Author**
 
 *Tim Sherman*
