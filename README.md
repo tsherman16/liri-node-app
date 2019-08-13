@@ -55,3 +55,24 @@ As you can see above, when you enter the command for movie-this, it will get the
 ### *node liri.js do-what-it-says*
 ![do-what-it-says](/images/do-what-it-says.png)
 As you can see above, when you enter the command for do-what-it-says, it will pull the text from the random.txt file and run that command. In this example shown the user has written "movie-this 'step brothers'", thus running the movie-this command and looking up the information for Step Brothers from the omdb API.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+## **Built with**
+
+**Node Packages:**
+   * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
+
+   * [Axios](https://www.npmjs.com/package/axios)
+
+     * Grabbing data from the [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
+
+   * [Moment](https://www.npmjs.com/package/moment)
+
+   * [DotEnv](https://www.npmjs.com/package/dotenv)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+## **Author**
+
+*Tim Sherman*
