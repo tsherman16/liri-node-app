@@ -34,16 +34,16 @@ function callText() {
         if (err) return console.log(err);
 
         var Textarray = text.toString().split(" ");
-        for (i = 0; i < array.length; i++) {
+        for (i = 0; i < Textarray.length; i++) {
             switch (Textarray[0]) {
                 case ("concert-this"):
-                    concertNeeds(Textarray[1]);
+                    concertNeeds(Textarray.slice(1).join(" "));
                     break;
                 case ("spotify-this-song"):
-                    spotifyNeeds(Textarray[1]);
+                    spotifyNeeds(Textarray.slice(1).join(" "));
                     break;
                 case ("movie-this"):
-                    movieNeeds(Textarray[1]);
+                    movieNeeds(Textarray.slice(1).join(" "));
                     break;
                 default:
                     console.log("I don't know what you are trying to do.");
@@ -55,7 +55,7 @@ function callText() {
 function spotifyNeeds(song) {
     var songName = song || "The Sign";
 
-    spotifyKeys.search({ type: 'track', query: songName, limit: 10 }, function (err, response) {
+    spotifyKeys.search({ type: 'track', query: songName }, function (err, response) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
